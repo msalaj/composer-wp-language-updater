@@ -111,14 +111,11 @@ class T10ns {
 				$this->slug         = $this->extract_slug( $package->getName(), $this->package_type );
 				break;
 
-			case 'package':
-				if ( 'johnpbloch/wordpress' === $package->getName() || 'roots/wordpress' === $package->getName() ) {
-					$this->package_type = 'core';
-					$this->slug         = 'wordpress-core';
-					break;
-				}
-				$this->is_wp_package = false;
-				return false;
+			case 'wordpress-core':
+				$this->package_type = 'core';
+				$this->slug         = 'wordpress-core';
+				break;
+				
 			default:
 				$this->is_wp_package = false;
 				return false;

@@ -2,3 +2,6 @@
 vendor/
 
 tests/wp-content
+
+.idea
+
